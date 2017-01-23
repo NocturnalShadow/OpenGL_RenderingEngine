@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource">
+      <UniqueIdentifier>{8178ef23-da62-4b2c-a6b1-0200f7f649f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource\Shaders">
+      <UniqueIdentifier>{dd0de355-2fed-458e-b30d-c71906511228}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource\Textures">
+      <UniqueIdentifier>{422e0c23-fa83-4fee-9f8f-73b318a5d8af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource\Meshes">
+      <UniqueIdentifier>{d1871e7f-0ec8-4b80-952b-cbbb737987f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GraphX">
+      <UniqueIdentifier>{39a843ee-3ba7-446d-b02f-de05fb060941}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GraphX\Headers">
+      <UniqueIdentifier>{ef3a567c-74a1-4e2f-8ed7-abce599c8baf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GraphX\Headers\Helpers">
+      <UniqueIdentifier>{fa8eb16c-abc9-4b90-a784-e28b5bb47f9a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GraphX\Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="GraphX\Source Files\Helpers">
+      <UniqueIdentifier>{d1124158-be67-43e9-84d8-21073f8900c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core">
+      <UniqueIdentifier>{73c721c7-e374-47a0-92c1-dcb249c6e9bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Platform">
+      <UniqueIdentifier>{118203ef-240e-4cda-972c-47e953827436}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Platform\Headers">
+      <UniqueIdentifier>{db1be129-6ae7-4e4b-9c25-ecf8807d4c78}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Platform\Source Files">
+      <UniqueIdentifier>{28df7184-e946-491a-bf9f-b8de34f3919f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Timer">
+      <UniqueIdentifier>{31126c0a-c05a-4f9d-b8d3-155bfcd041ac}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="shader.cpp">
+      <Filter>GraphX\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh.cpp">
+      <Filter>GraphX\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="texture.cpp">
+      <Filter>GraphX\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stb_image.c">
+      <Filter>GraphX\Source Files\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="obj_loader.cpp">
+      <Filter>GraphX\Source Files\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="window.cpp">
+      <Filter>Core\Platform\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="timer.cpp">
+      <Filter>Core\Timer</Filter>
+    </ClCompile>
+    <ClCompile Include="core.cpp">
+      <Filter>Core\Platform\Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="shader.h">
+      <Filter>GraphX\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh.h">
+      <Filter>GraphX\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="texture.h">
+      <Filter>GraphX\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="include\stb_image.h">
+      <Filter>GraphX\Headers\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="transform.h">
+      <Filter>GraphX\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="include\obj_loader.h">
+      <Filter>GraphX\Headers\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="camera.h">
+      <Filter>GraphX\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="window.h">
+      <Filter>Core\Platform\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="timer.h">
+      <Filter>Core\Timer</Filter>
+    </ClInclude>
+    <ClInclude Include="core.h">
+      <Filter>Core\Platform\Headers</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\basicShader.fs">
+      <Filter>Resource\Shaders</Filter>
+    </None>
+    <None Include="res\basicShader.vs">
+      <Filter>Resource\Shaders</Filter>
+    </None>
+    <None Include="res\monkey3.obj">
+      <Filter>Resource\Meshes</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\texture1.jpg">
+      <Filter>Resource\Textures</Filter>
+    </Image>
+    <Image Include="res\bricks.png">
+      <Filter>Resource\Textures</Filter>
+    </Image>
+  </ItemGroup>
+</Project>
