@@ -26,8 +26,8 @@ auto main(int argc, char* argv[]) -> int
 {
 	InitEngine();
 
-	Window window(1024, 768, "Monkeys");
-	Window window2(1024, 768, "Monkeys2");
+	Window window(800, 600, "Monkeys");
+	Window window2(800, 600, "Monkeys2");
 	window.Focus();
 	window.DrawTo();
 
