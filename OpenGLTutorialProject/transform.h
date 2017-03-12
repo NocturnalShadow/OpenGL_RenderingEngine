@@ -26,15 +26,15 @@ public:
 
 	void SetPos(const glm::vec3& pos)		{ m_pos = pos; }
 	void SetRot(const glm::vec3& rot)		{ m_rot = rot; }
-	void SetScale(const glm::vec3& scale)	{ m_scale = scale; }
+	void SetScale(const glm::vec3& scale)		{ m_scale = scale; }
 
-	glm::vec3& Position()					{ return m_pos;	}
-	glm::vec3& Rotation()					{ return m_rot;	}
-	glm::vec3& Scale()						{ return m_scale; }
+	glm::vec3& Position()				{ return m_pos;	}
+	glm::vec3& Rotation()				{ return m_rot;	}
+	glm::vec3& Scale()				{ return m_scale; }
 
 	glm::mat4 GetModel() const
 	{
-		glm::mat4 posMatrix		= glm::translate(m_pos);
+		glm::mat4 posMatrix	= glm::translate(m_pos);
 		glm::mat4 rotXMatrix	= glm::rotate(m_rot.x, glm::vec3(1, 0, 0));
 		glm::mat4 rotYMatrix	= glm::rotate(m_rot.y, glm::vec3(0, 1, 0));
 		glm::mat4 rotZMatrix	= glm::rotate(m_rot.z, glm::vec3(0, 0, 1));
