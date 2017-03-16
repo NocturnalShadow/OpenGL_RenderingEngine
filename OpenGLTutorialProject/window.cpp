@@ -30,6 +30,8 @@ Window::Window(int width, int height, std::string title)
 
 	glEnable(GL_CULL_FACE);
 	glCullFace(GL_BACK);
+
+	glViewport(0, 0, m_width, m_height);
 }
 
 Window::~Window()

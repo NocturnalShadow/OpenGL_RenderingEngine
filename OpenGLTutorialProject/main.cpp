@@ -15,7 +15,7 @@
 #include <iostream>
 
 
-#define WIDTH 1024
+#define WIDTH 1366
 #define HEIGHT 768
 
 bool float_comp(float f1, float f2, float abs_tol) {
@@ -26,7 +26,7 @@ auto main(int argc, char* argv[]) -> int
 {
 	InitEngine();
 
-	Window window(800, 600, "Monkeys");
+	Window window(WIDTH, HEIGHT, "Space Monkey");
 	//Window window2(800, 600, "Monkeys2");
 	window.Focus();
 	window.DrawTo();
@@ -38,7 +38,7 @@ auto main(int argc, char* argv[]) -> int
 	Camera camera(glm::vec3(0, 0, -6), 70.0f, (float) WIDTH / (float) HEIGHT, 0.01f, 1000.0f);
 
 	Transform transform;
-	transform.Rotation().y = (float) M_PI;
+	transform.Rotation().y = (float)M_PI / 2;
 
 	Timer t1;
 	t1.run();
@@ -50,7 +50,7 @@ auto main(int argc, char* argv[]) -> int
 
 		texture.Bind(0);
 		shader.Bind();
-		transform.Rotation().y = (float)t1.timeElapsed();
+		transform.Rotation().y = (float) t1.timeElapsed() - (float)M_PI / 2;
 
 		float pos1 = 1.8f - (float)t1.timeElapsed() * 0.7f;
 		transform.Position().x = pos1;

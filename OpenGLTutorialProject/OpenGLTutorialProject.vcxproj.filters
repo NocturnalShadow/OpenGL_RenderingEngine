@@ -114,12 +114,24 @@
     <None Include="res\monkey3.obj">
       <Filter>Resource\Meshes</Filter>
     </None>
+    <None Include="res\sphere.obj">
+      <Filter>Resource\Meshes</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\texture1.jpg">
       <Filter>Resource\Textures</Filter>
     </Image>
     <Image Include="res\bricks.png">
+      <Filter>Resource\Textures</Filter>
+    </Image>
+    <Image Include="res\stone_texture.jpg">
+      <Filter>Resource\Textures</Filter>
+    </Image>
+    <Image Include="res\orange_flowers_texture.jpg">
+      <Filter>Resource\Textures</Filter>
+    </Image>
+    <Image Include="res\space_texture.jpg">
       <Filter>Resource\Textures</Filter>
     </Image>
   </ItemGroup>

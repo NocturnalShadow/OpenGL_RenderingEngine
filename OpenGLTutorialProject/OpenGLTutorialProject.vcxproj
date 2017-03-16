@@ -178,11 +178,20 @@
     <None Include="res\monkey3.obj">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
       <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
     </None>
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\bricks.png" />
+    <Image Include="res\orange_flowers_texture.jpg" />
+    <Image Include="res\space_texture.jpg" />
+    <Image Include="res\stone_texture.jpg" />
     <Image Include="res\texture1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\sphere.obj">
+      <FileType>Document</FileType>
+    </None>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
