@@ -42,8 +42,9 @@ private:
 	void InitMesh(const IndexedModel&);
 
 public:
-	Mesh(const std::vector<Vertex>&, const std::vector<unsigned int>&);
-	Mesh(const std::string&);
+	Mesh(const std::vector<Vertex>& vertices, const std::vector<unsigned int>& indices);
+	Mesh(const std::vector<glm::vec3> positions, const std::vector<glm::vec2> textures, const std::vector<unsigned int> indices);
+	Mesh(const std::string& fileName);
 	Mesh(const Mesh&) = delete;
 
 	virtual ~Mesh();

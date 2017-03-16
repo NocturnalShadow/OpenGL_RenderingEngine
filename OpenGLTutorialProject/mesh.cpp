@@ -56,6 +56,23 @@ Mesh::Mesh(const std::vector<Vertex> & vertices, const std::vector<unsigned int>
 	InitMesh(model);
 }
 
+Mesh::Mesh(const std::vector<glm::vec3> positions, const std::vector<glm::vec2> textures, const std::vector<unsigned int> indices)
+{
+	if (positions.size() != textures.size()) {
+		throw std::runtime_error("Invalid Mesh: positions - textures coordinates number missmatch.");
+	}
+
+	IndexedModel model;
+
+	model.positions = positions;
+	model.texCoords = textures;
+	model.indices = indices;
+
+	model.CalcNormals();
+
+	InitMesh(model);
+}
+
 Mesh::Mesh(const std::string & fileName)
 {
 	IndexedModel model = OBJModel(fileName).ToIndexedModel();

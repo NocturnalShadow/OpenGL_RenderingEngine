@@ -12,6 +12,7 @@ private:
 	glm::vec3 m_position;
 	glm::vec3 m_forward;
 	glm::vec3 m_up;
+
 public:
 	Camera() = default;
 	Camera(const glm::vec3& pos, float fov, float aspect, float zNear, float zFar)

@@ -27,7 +27,7 @@ auto main(int argc, char* argv[]) -> int
 	InitEngine();
 
 	Window window(800, 600, "Monkeys");
-	Window window2(800, 600, "Monkeys2");
+	//Window window2(800, 600, "Monkeys2");
 	window.Focus();
 	window.DrawTo();
 
@@ -43,10 +43,10 @@ auto main(int argc, char* argv[]) -> int
 	Timer t1;
 	t1.run();
 
-	while (!window.IsClosedRequested() || !window2.IsClosedRequested())
+	while (!window.IsClosedRequested())
 	{
 		window.Clear(0.1f, 0.095f, 0.1f, 1.0f);
-		window2.Clear(0.1f, 0.095f, 0.1f, 1.0f);
+		//window2.Clear(0.1f, 0.095f, 0.1f, 1.0f);
 
 		texture.Bind(0);
 		shader.Bind();
@@ -63,12 +63,12 @@ auto main(int argc, char* argv[]) -> int
 		mesh2.Draw(GL_LINES);
 
 		window.Update();
-		window2.Update();
+		//window2.Update();
 
 		if (window.IsClosedRequested())
 			window.Hide();
-		if (window2.IsClosedRequested())
-			window2.Hide();
+		/*if (window2.IsClosedRequested())
+			window2.Hide();*/
 	}
 	return 0;
 }
