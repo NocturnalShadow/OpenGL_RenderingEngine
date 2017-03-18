@@ -19,15 +19,17 @@ Shader::Shader(const std::string & fileName)
 	for(const auto & shader : m_shaders)
 		glAttachShader(m_program, shader);
 
-	glBindAttribLocation(m_program, 0, "position");											
-	glBindAttribLocation(m_program, 1, "texCoord");											
-	glBindAttribLocation(m_program, 2, "normal");
-
 	glLinkProgram(m_program);
 	CheckShaderError(m_program, GL_LINK_STATUS, true, "Error: Program linking faild: ");
 
 	glValidateProgram(m_program);
 	CheckShaderError(m_program, GL_VALIDATE_STATUS, true, "Error: Program is invalid: ");
+
+	// does not have any effect due to unknown reasons 
+	// all locations are sepecified in the shader manualy
+	//glBindAttribLocation(m_program, 0, "position");
+	//glBindAttribLocation(m_program, 1, "normal");
+	//glBindAttribLocation(m_program, 2, "texCoord");
 
 	m_uniforms[TRANSFORM_U] = glGetUniformLocation(m_program, "transform");
 }

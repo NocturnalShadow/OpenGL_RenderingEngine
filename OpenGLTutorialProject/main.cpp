@@ -8,10 +8,6 @@
 #include "camera.h"
 #include "timer.h"
 
-#include <vector>
-#include <unordered_map>
-#include <ctime>
-#include <string>
 #include <iostream>
 
 
@@ -27,9 +23,11 @@ auto main(int argc, char* argv[]) -> int
 	InitEngine();
 
 	Window window(WIDTH, HEIGHT, "Space Monkey");
-	//Window window2(800, 600, "Monkeys2");
+
 	window.Focus();
 	window.DrawTo();
+
+	//Window window2(800, 600, "Monkeys2");
 
 	Mesh mesh2("./res/monkey3.obj");
 	Shader shader("./res/basicShader");
